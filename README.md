@@ -21,6 +21,7 @@ The goal is to create a quick and simple react app, with the following requireme
 * Add a dark/light mode toggle to showcase additional UI skills.
 
 ## Start the program
+`npm install` - first time, then:
 `npm run dev` from root directory.
 
 ## Initial Design

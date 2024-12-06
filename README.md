@@ -20,10 +20,19 @@ The goal is to create a quick and simple react app, with the following requireme
 * Implement pagination if the number of breeds is large.
 * Add a dark/light mode toggle to showcase additional UI skills.
 
+## Start the program
+`npm run dev` from root directory.
+
+## Initial Design
 
 This is a simple representation of the component tree (base requirements only):
 
 <img width="438" alt="Screenshot 2024-12-06 at 17 15 45" src="https://github.com/user-attachments/assets/f5459316-651a-47db-9b63-64e915970fec">
+
+Bonus:
+
+* Pagination component in the same level of the tree as Table.tsx and Toolbar.tsx.
+* ThemeProvider using useContext hook - simple global state.
 
 ## Notes
 

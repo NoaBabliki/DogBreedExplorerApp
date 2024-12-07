@@ -88,7 +88,7 @@ const Home: React.FC = () => {
     return (
         <div className={`home ${darkMode ? 'dark-mode' : ''}`}>
         <h1 className={`title ${darkMode ? 'dark-mode' : ''}`}>Dog Breed Explorer App</h1>
-        <button className="theme-button" onClick={() => {setDarkMode(!darkMode)}}>{darkMode ? 'Light Mode' : 'Dark Mode'}</button>
+        <button onClick={() => {setDarkMode(!darkMode)}}>{darkMode ? 'Light Mode' : 'Dark Mode'}</button>
         <Toolbar filter={filter} setFilter={setFilter}/>
         <Table breedList={breedList} order={order} setOrder={setOrder} loading={loading}/>
         <Pagination page={page} limit={limit} setPage={setPage} setLimit={setLimit}/>

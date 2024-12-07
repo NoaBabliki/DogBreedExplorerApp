@@ -1,18 +1,24 @@
-
-.home {
-    background-color: white;
+:root {
+    --background-color: #ffffff;
+    --text: #1f1f1f;
+  }
+  
+.dark-mode {
+    --background-color: #1f1f1f;
+    --text: #ffffff;
 }
+
+body {
+    background-color: var(--background-color);
+    color: var(--text);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
 .title {
-    color: black;
-    margin: 20px;
+    margin: 20px 0px;
+    display: flex;
+    justify-content: center;
 }
 
-.dark-mode {
-    background-color: black;
-    color: white;
-}
-
-.theme-button {
-    margin: 20px;
-}

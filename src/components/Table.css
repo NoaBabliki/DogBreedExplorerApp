@@ -1,22 +1,23 @@
+:root {
+  --border-color: grey;
+}
+
+.dark-mode {
+  --border-color: lightgrey;
+}
+
 .breed-img {
-    height: 100px;
+    height: auto;
     width: 100px;
 }
 
 .styled-table {
-    width: 100%;
     border-collapse: collapse;
-    margin: 20px 0;
     font-size: 18px;
     text-align: left;
   }
 
   .styled-table th, .styled-table td {
     padding: 12px 15px;
-    border: 1px solid grey;
-  }
-  
-  .dark-mode {
-    border-color: lightgray;
-    color: white;
+    border: 1px solid var(--border-color);
   }

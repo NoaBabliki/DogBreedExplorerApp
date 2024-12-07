@@ -38,4 +38,5 @@ Bonus:
 ## Notes
 
 * Dog api doesn't have working sort / filter abilities, so I implemented the FE side that add the required query parameters, but the BE does nothing with them.
-* I didn't think too hard about beutiful design and css.
+* Usually I will get the maximum number of items, current page, current limit from the BE, but no api for it so I counter myself and added as a constant.
+* Table and theme have a basic design.

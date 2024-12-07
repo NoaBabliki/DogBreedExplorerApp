@@ -1,7 +1,6 @@
 import React from "react";
 import './Table.css';
 import { Breed, Order } from "./Home";
-import { useTheme } from "./ThemeProvider";
 
 type Props = {
     breedList: Breed[];
@@ -12,17 +11,13 @@ type Props = {
 
 const Table: React.FC<Props> = ({breedList, order, setOrder, loading}) => {
 
-    const {darkMode} = useTheme();
-
     const changeOrder = () => {
         order === Order.ASC ? setOrder(Order.DESC) : setOrder(Order.ASC);
     }
 
     return (
-        <div>
-            {loading? 
-            <h2>loading...</h2> : 
-            <table className={`styled-table ${darkMode ? 'dark-mode' : ''}`}>
+        <div className="table-container">
+            <table className={`styled-table`}>
                 <thead>
                     <tr>
                         <th>
@@ -38,7 +33,7 @@ const Table: React.FC<Props> = ({breedList, order, setOrder, loading}) => {
                 <tbody>
                     {breedList.map((breed) => {
                         return (
-                            <tr key={breed.id}>
+                            <tr key={breed.id} className={loading ? 'loading' : ''}>
                             <td>{breed.name}</td>
                             <td>{breed.breed_group}</td>
                             <td>
@@ -51,7 +46,6 @@ const Table: React.FC<Props> = ({breedList, order, setOrder, loading}) => {
                     })}  
                 </tbody>
             </table>
-            }
         </div>
     );
 };

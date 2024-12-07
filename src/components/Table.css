@@ -1,9 +1,14 @@
 :root {
   --border-color: grey;
+  --header-background: lightgray;
+  --background-color: white;
 }
 
 .dark-mode {
   --border-color: lightgrey;
+  --header-background: rgb(101, 101, 101);
+  --background-color: white;
+  --background-color: #1f1f1f;
 }
 
 .breed-img {
@@ -11,13 +16,44 @@
     width: 100px;
 }
 
+.table-container {
+  overflow-y: auto;
+  height: 400px;
+  width: 700px;  
+  border: 2px solid var(--border-color);
+  background-color: var(--header-background);
+}
+
 .styled-table {
     border-collapse: collapse;
     font-size: 18px;
     text-align: left;
+    width: 100%;  
+    background-color: var(--background-color);
   }
 
-  .styled-table th, .styled-table td {
-    padding: 12px 15px;
-    border: 1px solid var(--border-color);
-  }
+.styled-table td {
+  padding: 12px 15px;
+  width: 25%;
+  border-right: 1px solid var(--border-color);
+  border-left: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.loading {
+    color: lightgray;
+}
+
+.styled-table th {
+  border-right: 1px solid var(--border-color);
+  border-left: 1px solid var(--border-color);
+  padding: 12px 15px;
+  
+}
+
+.styled-table thead {
+  z-index: 2;
+  position: sticky;
+  top: 0;
+  background-color: var(--header-background);
+}

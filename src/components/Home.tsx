@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useEffect } from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import Table from "./Table";
 import Toolbar from "./Toolbar";
@@ -77,7 +77,6 @@ const Home: React.FC = () => {
 
     useEffect(() => {
        fetchBreedList(filter, order, limit, page).then(jsonRes => {
-            console.log('json res',jsonRes)
             const newBreedList: Breed[] = jsonRes;
             if (jsonRes) {
                 setBreedList(newBreedList);
